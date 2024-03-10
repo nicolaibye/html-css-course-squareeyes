@@ -213,6 +213,44 @@ input, select, textarea {
     align-items: center;
 }
 
+.featured_films_details_container {
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(28,38,46);
+    background: linear-gradient(90deg, rgba(28,38,46,0) 0%, rgba(25,73,101,1) 50%, rgba(12,108,149,1) 75%, rgba(80,189,228,1) 100%);
+    background-position: right;
+    color: #fff;
+    width: 70%;
+    padding: 164px 50px 118px;
+}
+
+.featured_films_cover {
+    height: auto;
+}
+
+.featured_films_details {
+    margin: 0px 56px;
+    width: 388px;
+}
+
+.featured_films_details > * {
+    padding-bottom: 25px;
+}
+
+.section_films_container {
+    height: 412px;
+}
+
+.section_films {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+.film_info_block {
+    width: 167px;
+}
+
 /* padding */
 
 footer {
@@ -245,6 +283,13 @@ h1 {
 h2 {
     font-size: 1.8rem;
     font-style: bold;
+}
+
+.copyright_1 {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
 /* Icons */
