@@ -48,6 +48,8 @@ header i {
 }
 
 nav {
+    transition-property: background;
+    transition-duration: 0.5s;
     position: absolute;
     padding: 0rem 5rem;
 }
