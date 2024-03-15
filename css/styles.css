@@ -20,6 +20,10 @@ body {
 
 /* color */
 
+a {
+    color: #000;
+}
+
 .block_pink {
     background-color: #D9335B;
     color: #fff;
@@ -239,18 +243,49 @@ input, select, textarea {
     padding-bottom: 25px;
 }
 
-.section_films_container {
-    height: 412px;
-}
-
 .section_films {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
 }
 
+.section_films_container {
+    padding: 60px;
+}
+
 .film_info_block {
-    width: 167px;
+    box-sizing: border-box;
+    height: 246px;
+    width: 236px;
+    padding: 16px 16px;
+    color: #000;
+    background-color: #D4F7FF;
+}
+
+div.film_info_block h2, p{
+    padding-bottom: 14px;
+}
+
+div.film_info_block ul{
+    display: inline-flex;
+    padding-inline-start: 0px;
+}
+
+div.film_info_block ul li{
+    display: flex;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    top: 20;
+}
+
+div.film_info_block ul li a{
+    color: #000;
+    margin: auto;
 }
 
 /* padding */
@@ -258,6 +293,13 @@ input, select, textarea {
 footer {
     padding: 5rem;
 }
+
+/* Float */
+
+.float_right {
+    float: right;    
+}
+
 
 /* Sizes */
 
@@ -269,6 +311,11 @@ footer {
     height: 2.4rem;
     width: auto;
     margin: 10px;
+}
+
+.section_films_cover {
+    height: 246px;
+    width: auto;
 }
 
 /* Text */
@@ -290,7 +337,7 @@ h2 {
 .copyright_1 {
     font-size: 11px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -302,4 +349,8 @@ h2 {
 
 .profile_page_icon {
     font-size: 22rem;
+}
+
+.film_icons {
+    font-size: 1.5rem;
 }
