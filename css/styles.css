@@ -246,7 +246,6 @@ input, select, textarea {
 .section_films {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-
 }
 
 .section_films_container {
@@ -260,6 +259,8 @@ input, select, textarea {
     padding: 16px 16px;
     color: #000;
     background-color: #D4F7FF;
+    position: relative;
+    top: -250px;
 }
 
 div.film_info_block h2, p{
@@ -279,13 +280,29 @@ div.film_info_block ul li{
     margin-right: 20px;
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0);
-    position: relative;
-    top: 20;
 }
 
 div.film_info_block ul li a{
     color: #000;
     margin: auto;
+}
+
+.inspiration_section {
+    display: flex;
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.inspiration_section div{
+    padding: 60px;
+}
+
+.inspiration_section input{
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 0.5rem;
+    height: 32px;
+    width: 336px;
 }
 
 /* padding */
@@ -303,7 +320,7 @@ footer {
 
 /* Sizes */
 
-#inspiration_section img {
+.inspiration_section img {
     max-width: 50%;
 }
 
