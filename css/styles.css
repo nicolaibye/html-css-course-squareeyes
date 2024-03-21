@@ -82,6 +82,7 @@ nav {
     justify-content: space-between;
     padding: 0rem 5rem;
     height: 65px;
+    width: 100%;
 }
 
 .nav-active {
@@ -110,7 +111,7 @@ nav, #menu_checkbox {
 }
 
 #genre_checkbox:checked ~ .genre_dropdown {
-    display: block;
+    display: flex;
 }
 
 
@@ -127,7 +128,7 @@ nav, #menu_checkbox {
     height: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     nav {
         background: rgb(34,28,30);
     }
@@ -142,7 +143,7 @@ nav, #menu_checkbox {
 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1001px) {
     nav {
         display: flex;
         position: sticky;
@@ -171,9 +172,13 @@ nav, #menu_checkbox {
     
     .genre_dropdown {
         position: absolute;
+        flex-direction: column;
         background-color: #221C1E;
-        flex-direction: row;
-        padding: 12px;
+        padding: 16px;
+    }
+
+    .genre_dropdown li {
+        margin: auto 0px;
     }
 
     .profile_dropdown {
@@ -314,6 +319,7 @@ div.featured_films_details ul li{
     top: -250px;
     z-index: -1;
 }
+
 
 div.film_info_block h2, p{
     padding-bottom: 14px;
