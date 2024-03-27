@@ -107,14 +107,29 @@ nav, #menu_checkbox {
     display: block;
 }
 
+/* Backup genre menu */
+
 .genre_dropdown, #genre_checkbox {
     display: none;
 }
 
-#genre_checkbox:checked ~ .genre_dropdown {
+#genre_checkbox:hover ~ .genre_dropdown {
     display: flex;
 }
 
+/* NAV TESTING HOVER WORKING PROPERLY working on index */ 
+
+.genre_dropdown {
+    display: none;
+    position: absolute;
+    left: 49%;
+    visibility: hidden;
+}
+
+.has_sub:hover ~ .genre_dropdown {
+    display: flex;
+    visibility: visible;
+}
 
 .profile_dropdown, #profile_checkbox {
     display: none;
