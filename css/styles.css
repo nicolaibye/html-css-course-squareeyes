@@ -203,9 +203,50 @@ nav, #menu_checkbox {
 /* Footer */
 
 footer {
-    padding: 5rem;
+    padding: 2rem;
 
     /* come back and make it stick to the bottom somehow */
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 110px);
+    justify-content: center;
+    align-items: start;
+}
+
+.footer_grid div a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 120px;
+}
+
+.footer_left a {
+    padding: 8px;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 220px;
+    justify-content: center;
+    grid-column-start: 5;
+}
+
+.footer_right a {
+    padding: 10px;
+}
+
+.footer_copyright {
+    grid-column-end: span 2;
+    padding: 8px;
 }
 
 /* Button */
@@ -213,7 +254,7 @@ footer {
 .cta {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     width: 220px;
     height: 29px;
     color: #000;
@@ -519,4 +560,8 @@ h2 {
 
 .film_icons {
     font-size: 1.5rem;
+}
+
+.footer_icon {
+    font-size: 2.4rem;
 }
