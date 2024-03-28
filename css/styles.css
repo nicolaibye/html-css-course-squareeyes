@@ -12,10 +12,13 @@ html {
 }
 
 body {
-    box-sizing: border-box;
     margin: 0;
     font-size: 1.6rem;
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    box-sizing: border-box;
 }
 
 ul {
@@ -113,13 +116,15 @@ nav, #menu_checkbox {
     display: none;
 }
 
-#genre_checkbox:hover ~ .genre_dropdown {
+#genre_checkbox:checked ~ .genre_dropdown {
     display: flex;
+    position: absolute;
+    left: 49%;
 }
 
 /* NAV TESTING HOVER WORKING PROPERLY working on index */ 
 
-.genre_dropdown {
+/* .genre_dropdown {
     display: none;
     position: absolute;
     left: 49%;
@@ -129,7 +134,7 @@ nav, #menu_checkbox {
 .has_sub:hover ~ .genre_dropdown {
     display: flex;
     visibility: visible;
-}
+} */
 
 .profile_dropdown, #profile_checkbox {
     display: none;
@@ -418,7 +423,7 @@ div.film_info_block ul li a{
 .film_product > div {
     opacity: 0;
     left: -20px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .film_product:hover > div {
@@ -476,24 +481,18 @@ div.film_info_block ul li a{
     flex-direction: row;
 }
 
-.bottom_footer {
-    width: 100vw;
-    margin: 0px 0px;
-    bottom: 0px;
-}
-
 /* Library page */
 
 .library_films {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-    grid-template-rows: repeat(4, 248px); 
+    grid-auto-rows: 248px;
     gap: 24px;
 }
 
 .library_main {
     position: relative;
-    margin: 124px 60px auto;
+    margin: 124px 60px 88px;
 }
 
 .search_bar {
