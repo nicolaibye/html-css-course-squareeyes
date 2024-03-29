@@ -513,6 +513,118 @@ div.film_info_block ul li a{
     margin-top: 30px;
 }
 
+/* Checkout page */
+
+.checkout_main_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 110px) ;
+    grid-auto-rows: min-content;
+}
+
+.checkout_header_line {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 110px) ;
+}
+
+.checkout_overview_product {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 110px) ;
+    grid-column: 1 / end;
+}
+
+.checkout_main_grid hr {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: end;
+    margin: 16px 0px;
+}
+
+.checkout_picture {
+    grid-column: 1 / span 1;
+    width: 110px;
+}
+
+.checkout_details_product * {
+    padding: 4px 0px;
+}
+
+.checkout_details_product {
+    padding: 16px;
+    grid-column: 2 / span 3;
+    align-self: center;
+}
+
+.checkout_single_price_product, .checkout_total_price_product, .checkout_amount_product {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.checkout_amount_text_product {
+    grid-column-start: 11;
+}
+
+.checkout_amount_product {
+    grid-column-start: 12;
+}
+
+.checkout_total_price_product {
+    grid-column-end: end;
+}
+
+.checkout_single_price_product {
+    grid-column-start: 14;
+}
+
+.checkout_cta {
+    grid-column: 14 / span 2;
+}
+
+.checkout_line * {
+    padding: 16px 0px 16px 0px;
+}
+
+/* Product qunantity */
+
+.counter {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter input {
+    width: 32px;
+    height: 32px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    background: #f4f4f4;
+    appearance: none;
+    outline: 0;
+    margin: 0px;
+    border-radius: 0px;
+}
+.counter span {
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    padding: 0px 8px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #D9335B;
+    user-select: none;
+    font-weight: bold;
+}
+
+.up {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.down {
+    border-radius: 5px 0px 0px 5px;
+}
+
 /* form */
 
 .contact_form {
@@ -656,12 +768,10 @@ input, textarea {
 
 h1 {
     font-size: 2.4rem;
-    font-style: bold;
 }
 
 h2 {
     font-size: 1.8rem;
-    font-style: bold;
 }
 
 .copyright_1 {
@@ -675,6 +785,13 @@ h2 {
     font-size: 13px;
     font-style: normal;
     font-weight: 300;
+    line-height: normal;
+}
+
+.infotext {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
 }
 
