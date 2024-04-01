@@ -122,20 +122,6 @@ nav, #menu_checkbox {
     left: 49%;
 }
 
-/* NAV TESTING HOVER WORKING PROPERLY working on index */ 
-
-/* .genre_dropdown {
-    display: none;
-    position: absolute;
-    left: 49%;
-    visibility: hidden;
-}
-
-.has_sub:hover ~ .genre_dropdown {
-    display: flex;
-    visibility: visible;
-} */
-
 .profile_dropdown, #profile_checkbox {
     display: none;
 }
@@ -225,7 +211,10 @@ nav, #menu_checkbox {
 
 footer {
     padding: 2rem;
-
+    position: relative;
+    bottom: 0;  
+    width: 100%;
+    height: 21.8rem;
     /* come back and make it stick to the bottom somehow */
 }
 
@@ -268,6 +257,14 @@ footer {
 .footer_copyright {
     grid-column-end: span 2;
     padding: 8px;
+}
+
+.footer_index {
+    bottom: -651px;
+}
+
+.footer_mincontent {
+    position: absolute;
 }
 
 /* Button */
@@ -358,6 +355,7 @@ div.featured_films_details ul li{
 .section_films {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 248px;
 }
 
 .section_films_container {
@@ -422,13 +420,13 @@ div.film_info_block ul li a{
 
 .film_product > div {
     opacity: 0;
-    left: -20px;
-    transition: 0.5s;
+    left: -0px;
+    transition: 0.4s;
 }
 
 .film_product:hover > div {
     opacity: 1;
-    left: 168px;
+    left: 167px;
 }
 
 .inspiration_section {
@@ -831,4 +829,86 @@ h2 {
 
 .footer_icon {
     font-size: 2.4rem;
+}
+
+/* Info boxes colors */
+
+.toy_story_info {
+    background-color: #ffea8a;
+}
+
+.batman_info {
+    background-color: #f7cf73;
+}
+
+.addams_family_info {
+    background-color: #e3ad90;
+}
+
+.hobbs_info {
+    background-color: #c9cfd0;
+}
+
+.scream_info {
+    background-color: #b3dae1;
+}
+
+.hollywood_info {
+    background-color: #f2b173;
+}
+
+.strangers_info {
+    background-color: #ECBFDC;
+}
+
+.thousand_info {
+    background-color: #d2ced1;
+}
+
+.theater_camp_info {
+    background-color: #bbd38d;
+}
+
+.past_lives_info {
+    background-color: #d4e6db;
+}
+
+.scrapper_info {
+    background-color: #ffe897;
+}
+
+.earthmama_info {
+    background-color: #f9cbe4;
+}
+
+.passages_info {
+    background-color: #fff6e5;
+}
+
+.after_yang_info {
+    background-color: #f6e1bc;
+}
+
+.titane_info {
+    background-color: #cde0ff;
+}
+
+.nope_info {
+    background-color: #75a9ff;
+}
+
+.candyman_info {
+    background-color: #fce05c;
+}
+
+.mandy_info {
+    background-color: #fface3;
+}
+
+.little_woman_info {
+    background-color: #fff7ed;
+}
+
+.infinity_info {
+    background-color: #ff8989;
 }
