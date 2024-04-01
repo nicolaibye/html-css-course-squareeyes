@@ -54,50 +54,69 @@
             </section>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>Shipping info</h1>
+    <main class="library_main checkout_main">
+        <section class="checkout_shipping_grid">
+            <h1 class="hyper_header">Shipping info</h1>
             <hr>
+            <div>
+                
+            </div>
             <form action="shipping_form_success.php" method="post"></form>
-            <div class="shipping_form">
-                <label for="firstname">First name</label>
-                <input type="text" name="firstname" id="firstname" required>
-                <label for="lastname">Last name</label>
-                <input type="text" name="lastname" id="lastname" required>
+            <div class="shipping_form shipping_two_cells">
+                <div>
+                    <label for="firstname"></label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First name" required>
+                </div>
+                <div>
+                    <label for="lastname"></label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last name" class="shipping_two_cells_right" required>
+                </div>
             </div>
             <div class="shipping_form">
-                <label for="address">Address</label>
-                <input type="address" id="address" name="address" required>
+                <label for="address"></label>
+                <input type="address" id="address" name="address" placeholder="Address" class="shipping_single_cell" required>
             </div>
             <div class="shipping_form">
-                <label for="zip_code">Zip code</label>
-                <input type="zip_code" id="zip_code" name="zip_code" required>
+                <label for="zip_code"></label>
+                <input type="zip_code" id="zip_code" name="zip_code" placeholder="Zip code" class="shipping_single_cell" required>
             </div>
             <div class="shipping_form">
-                <label for="city">City</label>
-                <input type="city" id="city" name="city" required>
+                <label for="city"></label>
+                <input type="city" id="city" name="city" placeholder="City" class="shipping_single_cell" required>
             </div>
-            <div class="shipping_form">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" required>
-                <label for="tel">Phone</label>
-                <input type="tel" name="tel" id="tel" required>
+            <div class="shipping_form shipping_two_cells margin_sixty_bottom">
+                <div>
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <label for="tel"></label>
+                    <input type="tel" name="tel" id="tel" placeholder="Phone" required>
+                </div>
             </div>
-            <h1>Payment</h1>
+            <h1 class="hyper_header">Payment</h1>
             <hr>
-            <input type="radio" name="payment" value="paypal" id="payment_option_1" />
-            <label for="payment_option_1"><img src="../images/logo/PayPal_logo.svg" alt="PayPal" class="payment_method_svg"></label>
-            <input type="radio" name="payment" value="credit_card" id="payment_option_2" checked />
-            <label for="payment_option_2"><img src="../images/logo/Visa_Inc._logo.svg" alt="Visa" class="payment_method_svg"><img src="../images/logo/Mastercard_2019_logo.svg" alt="Mastercard" class="payment_method_svg"></label>
-            <input type="radio" name="payment" value="bill" id="payment_option_3" />
-            <label for="payment_option_3">Buy now pay later</label>
+            <div class="shipping_payment_grid">
+                <div>
+                    <input type="radio" name="payment" value="paypal" id="payment_option_1" />
+                    <label for="payment_option_1"><img src="../images/logo/PayPal_logo.svg" alt="PayPal" class="payment_method_svg"></label>
+                </div>
+                <div>
+                    <input type="radio" name="payment" value="credit_card" id="payment_option_2" checked />
+                    <label for="payment_option_2"><img src="../images/logo/Visa_Inc._logo.svg" alt="Visa" class="payment_method_svg"><img src="../images/logo/Mastercard_2019_logo.svg" alt="Mastercard" class="payment_method_svg"></label>
+                </div>
+                <div>
+                    <input type="radio" name="payment" value="bill" id="payment_option_3" />
+                    <label for="payment_option_3">Buy now pay later</label>
+                </div>
+            </div>
             <hr>
             <a href="../checkout/checkout_success.html" class="cta">Pay €36</a>
         </section>
-        <section id="checkout_your_order">
-            <h1>Your order</h1>
+        <section class="checkout_your_order">
+            <h1 class="hyper_header">Your order</h1>
             <hr>
-            <div>
+            <div class="checkout_your_order">
                 <div class="film_checkout_overview">
                     <img src="../images/covers/godzilla_kingofthemonsters_cover.jpg" alt="Godzilla: King of the Monsters cover">
                     <div>
@@ -108,7 +127,6 @@
                     </div>
                     <p>€6</p>
                 </div>
-                <hr>
                 <div class="film_checkout_overview">
                     <img src="../images/covers/all_of_us_strangers_cover.jpg" alt="All of Us Strangers cover">
                     <div>
@@ -118,7 +136,6 @@
                     </div>
                     <p>€20</p>
                 </div>    
-                <hr>
                 <div class="film_checkout_overview">
                     <img src="../images/covers/after_yang_cover.png" alt="After Yang cover">
                     <div>
@@ -129,10 +146,11 @@
                     <p>€10</p>
                 </div>     
             </div>
+            <hr>
+            <p>Total</p>
+            <p>€36</p>
         </section>
-        <hr>
-        <p>Total</p>
-        <p>€36</p>
+
     </main>
     
     
