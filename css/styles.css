@@ -350,8 +350,20 @@ div.featured_films_details ul li{
 
 .section_films {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 248px;
+    grid-auto-flow: column;
+    grid-auto-rows: 250px;
+    
+    padding-bottom: 16px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.snaps_inline {
+    scroll-snap-type: inline mandatory;
+}
+
+.snaps_inline > * {
+    scroll-snap-align: start;
 }
 
 .section_films_container {
@@ -422,18 +434,26 @@ div.film_info_block ul li a{
 
 .film_product:hover > div {
     opacity: 1;
-    left: 167px;
+    left: 166px;
+    transition-delay: 0.5s;
+}
+
+.film_product:hover {
+    filter: drop-shadow(rgba(22, 0, 9, 0.247) 0rem 0rem 20px);
 }
 
 .inspiration_section {
     display: flex;
-    max-width: 1440px;
     margin: 0px auto;
     position: relative;
     bottom: -651px;
 }
 
-.inspiration_section div{
+.inspiration_text > * {
+    margin: 28px 0px;
+}
+
+.inspiration_section > div:first-child {
     padding: 60px;
 }
 
@@ -443,6 +463,14 @@ div.film_info_block ul li a{
     border-radius: 0.5rem;
     height: 32px;
     width: 336px;
+}
+
+.inspiration_section_img {
+    background-image: url(../images/popcorn_inspopicture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3132px;
 }
 
 /* About page */
@@ -800,8 +828,13 @@ input, textarea {
 
 /* Align */
 
-.float_right {
-    float: right;    
+.inspiration_float_right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.inspiration_float_right > label {
+    padding: 6px 12px;
 }
 
 .details_bottom {
@@ -809,10 +842,6 @@ input, textarea {
 }
 
 /* Sizes */
-
-.inspiration_section img {
-    max-width: 50%;
-}
 
 .payment_method_svg {
     height: 2.4rem;
