@@ -283,6 +283,7 @@ footer {
 
 .cta_order_complete {
     width: 150px;
+    height: 40px;
 }
 
 .cta_contact {
@@ -298,8 +299,7 @@ footer {
 }
 
 .centered_align {
-    justify-content: center;
-    align-items: center;
+    margin: auto 0px;
 }
 
 .featured_films_details_container {
@@ -539,13 +539,14 @@ div.film_info_block ul li a{
 
 .checkout_main {
     display: grid;
-    grid-template-columns: repeat(12, 110px);
+    grid-template-columns: repeat(11, 110px);
+    justify-content: center;
 }
 
 .checkout_main_grid {
     display: grid;
     grid-template-columns: repeat(12, 110px) ;
-    width: 1440px;
+    width: 1330px;
     margin: 0px auto;
 }
 
@@ -654,6 +655,7 @@ div.film_info_block ul li a{
 }
 
 .checkout_your_order {
+    position: sticky;
     grid-column: 8;
     width: 440px;
 }
@@ -675,6 +677,48 @@ div.film_info_block ul li a{
     margin: 10px 0px;
 }
 
+.film_checkout_overview > div > p, .film_checkout_overview > div > h2 {
+    margin: 8px 16px;
+}
+
+.film_checkout_overview > div {
+    margin: auto 0px;
+}
+
+.film_checkout_overview_total {
+    display: flex;
+}
+
+.film_checkout_overview_total > p{
+    margin-right: 88px;
+}
+
+/* Checkout success */
+
+.checkout_success_main {
+    width: 480px;
+    margin: auto;
+    margin-top: 184px;
+    text-align: center;
+}
+
+.checkout_success_main > * {
+    margin-bottom: 60px;
+}
+
+.checkout_success_action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout_success_main > p {
+    margin-bottom: 0px;
+}
+
+.checkout_success_action > * {
+    margin: 14px;
+}
 
 /* Product qunantity */
 
