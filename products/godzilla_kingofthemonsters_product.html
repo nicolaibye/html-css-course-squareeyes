@@ -8,14 +8,13 @@
     <meta property="og:url" content="https://www.squareeyes.com" />
     <meta property="og:type" content="shop" />
     <meta property="og:image" content="https://" />
-    <link rel="icon" type="image/svg" href="../images/icons/squareeyes_icon_square.svg">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="images/icons/squareeyes_icon_square.svg">
     <script src="https://kit.fontawesome.com/dd4a452c26.js" crossorigin="anonymous"></script>
-    <script src="../js/script.js" crossorigin="anonymous"></script>
-    <title>SquareEyes | Cart</title>
+    <title>SquareEyes | Library</title>
 </head>
 <body>
     <header>
@@ -30,9 +29,9 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../library.html">Library</a></li>
                     <input type="checkbox" id="genre_checkbox">
-                    <label for="genre_checkbox">Genre</label>
+                    <label for="genre_checkbox" class="nav-active">Genre</label>
                         <ul class="genre_dropdown">
-                            <li><a href="../genre/genre_action.html">Action</a></li>
+                            <li><a href="../genre/genre_action.html" class="nav-active">Action</a></li>
                             <li><a href="../genre/genre_fantasy.html">Fantasy</a></li>
                             <li><a href="../genre/genre_thriller.html">Thriller</a></li>
                         </ul>
@@ -42,8 +41,8 @@
             </section>
             <section class="right_header">
                 <ul>
-                    <li><a href="../wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="../checkout/checkout.html"><i class="fa-solid fa-cart-shopping nav-icon-active"></i></a></li>
+                    <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="../checkout/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <input type="checkbox" id="profile_checkbox">
                     <label for="profile_checkbox" class="profile_icon"><i class="fa-solid fa-user"></i></label>
                         <ul class="profile_dropdown">
@@ -56,77 +55,30 @@
         </nav>
     </header>
     <main>
-
-        <section class="library_main checkout_main">
-            <div class="checkout_main_grid">
-                <h1 class="hyper_header">Checkout</h1>
-                <p class="infotext checkout_amount_product">Amount</p>
-                <p class="infotext checkout_single_price_product">Price</p>
-            </div>
-
-            <div class="checkout_main_grid">
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/godzilla_kingofthemonsters_cover.jpg" alt="Godzilla: King of the Monsters cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2 class="pink_color">40% sale</h2>
-                        <h2>Godzilla: King of the Monsters</h2>
-                        <p>Sci-Fi/Action  |  12+  |  2 h 12 m</p>
-                        <p class="copyright_2">Online code</p>
+        <section>
+            <div>
+                <div class="product_container godzilla_product">
+                    <div class="product_films_details">
+                        <img src="../images/covers/godzilla_kingofthemonsters_cover.jpg" alt="Godzilla: King of the Monsters cover">
+                        <div>
+                            <h1>Godzilla: King of the Monsters</h1>
+                            <p class="copyright_2">Sci-Fi/Action  |  12+  |  2 h 12 m</p>
+                            <p>The crypto-zoological agency Monarch faces off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah.</p>
+                            <p class="copyright_2">Director: Michael Dougherty
+                            <br>Manuscript: Michael Dougherty, Zach Shields, Max Borenstein
+                            <br>Cast: Kyle Chandler, Vera Farmiga, Millie Bobby Brown, more</p>
+                            <h2>€10</h2>
+                            <ul>
+                                <li><a href="wishlist.html" class="button">Wishlist <i class="fa-solid fa-heart film_icons"></i></a></li>
+                                <li><a href="product_godzilla.html" class="button">Add to cart</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="1">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product pink_color">€6</h2>
-                    <h2 class="checkout_total_price_product pink_color">€6</h2>
                 </div>
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/all_of_us_strangers_cover.jpg" alt="All of Us Strangers cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2>All of Us Strangers</h2>
-                        <p>Fantasy/Romance  |  12+  |  1 h 45 m</p>
-                        <p class="copyright_2">Online code</p>
-                    </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="2">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product">€10</h2>
-                    <h2 class="checkout_total_price_product">€20</h2>
-                </div>    
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/after_yang_cover.png" alt="After Yang cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2>After Yang</h2>
-                        <p>Drama/Sci-Fi  |  9  |  1 h 36 m</p>
-                        <p class="copyright_2">Online code</p>
-                    </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="1">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product">€10</h2>
-                    <h2 class="checkout_total_price_product">€10</h2>
-                </div>
-                <hr>     
-            </div>
-            <div class="checkout_main_grid checkout_line">
-                <p class="checkout_amount_text_product">Items</p>
-                <p class="checkout_amount_product">4</p>
-                <p class="checkout_single_price_product">Total</p>
-                <h2 class="checkout_total_price_product">€36</h2>
-                <a href="../checkout/checkout_shipping.html" class="cta checkout_cta">checkout</a>
+                <video src="../images/videos/Godzilla shortened trailer_without_company_withsound.webm" autoplay muted loop class="product_films_trailer"></video>
             </div>
         </section>
-
     </main>
-    
     
     <footer class="block_off-black footer_mincontent">
         <div class="footer_grid">
@@ -199,5 +151,6 @@
         </div>
 
     </footer>
+
 </body>
 </html>

@@ -131,7 +131,7 @@ nav, #menu_checkbox {
     height: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1226px) {
     nav {
         background: rgb(34,28,30);
     }
@@ -146,7 +146,7 @@ nav, #menu_checkbox {
 
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1225px) {
     nav {
         display: flex;
         position: sticky;
@@ -296,10 +296,6 @@ footer {
 
 .section1_films{
     width: 200px;
-}
-
-.centered_align {
-    margin: auto 0px;
 }
 
 .featured_films_details_container {
@@ -537,23 +533,27 @@ div.film_info_block ul li a{
 
 /* Checkout page */
 
-.checkout_main {
+.checkout_main_shipping {
     display: grid;
     grid-template-columns: repeat(11, 110px);
     justify-content: center;
 }
 
+.checkout_main {
+    display: grid;
+    justify-content: center;
+}
+
 .checkout_main_grid {
     display: grid;
-    grid-template-columns: repeat(12, 110px) ;
-    width: 1330px;
+    grid-template-columns: repeat(11, 110px);
     margin: 0px auto;
 }
 
 .checkout_overview_product {
     display: grid;
-    grid-template-columns: repeat(12, 110px) ;
-    width: 1440px;
+    grid-template-columns: repeat(11, 110px) ;
+    grid-auto-rows: min-content;
     margin: 0px auto;
 }
 
@@ -585,23 +585,23 @@ div.film_info_block ul li a{
 }
 
 .checkout_amount_text_product {
-    grid-column-start: 8;
+    grid-column-start: 7;
 }
 
 .checkout_amount_product {
-    grid-column-start: 9;
+    grid-column-start: 8;
 }
 
 .checkout_single_price_product {
-    grid-column-start: 11;
+    grid-column-start: 10;
 }
 
 .checkout_total_price_product {
-    grid-column-end: 13;
+    grid-column-end: 12;
 }
 
 .checkout_cta {
-    grid-column: 11 / span 2;
+    grid-column: 10 / span 2;
 }
 
 .checkout_line * {
@@ -759,6 +759,96 @@ div.film_info_block ul li a{
 
 .down {
     border-radius: 5px 0px 0px 5px;
+}
+
+/* Profile page */
+
+.profile_main_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 110px);
+    margin: 0px auto;
+}
+
+.profile_main_grid > h1 {
+    grid-column: 1 / span 6;
+    margin-bottom: 60px;
+}
+
+.profile_main_grid > i {
+    grid-column: 1 / span 3;
+}
+
+.profile_main_grid > div {
+    grid-column: 4 / span 3;
+}
+
+.profile_main_grid > div > div{
+    margin-bottom: 24px;
+    display: grid;
+}
+
+
+.profile_main_grid > div > div > p{
+    grid-column: 1 / span 3;
+    align-self: center;
+}
+
+.profile_main_grid > div > div > i{
+    grid-column: 4;
+    padding: 8px;
+    justify-self: flex-end;
+}
+
+/* Product styling */
+
+.product_container {
+    z-index: 1;
+    color: #fff;
+    padding: 164px 50px 118px;
+    position: absolute;
+    bottom: 218px;
+    width: 100%;
+}
+
+.product_films_details {
+    display: grid;
+    grid-template-columns: repeat(12, 110px);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.product_films_details > div {
+    grid-column: 4 / span 9;
+    align-self: center;
+}
+
+.product_films_details > div > h1,.product_films_details > div > p, .product_films_details > div > h2 {
+    margin-bottom: 25px;
+}
+
+.product_films_trailer {
+    height: 75%;
+    z-index: -2;
+    position: fixed;
+}
+
+div.product_films_details ul li{
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 128px;
+    height: 32px;
+    margin-right: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* Godzilla */
+
+.godzilla_product {
+    background: linear-gradient(180deg, rgba(28,38,46,0) 0%, rgba(25,73,101,1) 50%, rgba(12,108,149,1) 75%, rgba(80,189,228,1) 100%);
 }
 
 /* form */
@@ -951,6 +1041,11 @@ h2 {
 }
 
 /* Icons */
+
+.fa-bars {
+    padding: 16px;
+    font-size: 2rem;
+}
 
 .search_bar_long {
     position: absolute;
