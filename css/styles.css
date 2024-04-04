@@ -838,10 +838,13 @@ div.film_info_block ul li a{
     margin-bottom: 25px;
 }
 
-.product_films_trailer {
-    height: 75%;
+.youtube_trailer {
+    height: 75vw;
+    width: 140%;
     z-index: -2;
     position: fixed;
+    left: -20%;
+    top: -180px;
 }
 
 div.product_films_details ul li{
