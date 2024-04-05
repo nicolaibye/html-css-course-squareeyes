@@ -203,15 +203,38 @@ nav, #menu_checkbox {
     }
 }
 
+/* Flexbox layout */
+
+html, body {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: fit-content;
+}
+
+main {
+    flex: auto;
+}
+
+footer {
+    height: fit-content;
+}
+
 /* Footer */
 
 footer {
     padding: 2rem;
-    position: relative;
-    bottom: 0;  
     width: 100%;
     height: 21.8rem;
-    /* come back and make it stick to the bottom somehow */
 }
 
 .footer_grid {
@@ -479,6 +502,8 @@ div.film_info_block ul li a{
 /* About page */
 
 .about_main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 1100px;
     margin: auto;
     margin-top: 244px;
@@ -488,22 +513,25 @@ div.film_info_block ul li a{
     margin-bottom: 180px;
 }
 
-.about_main h1{
+.about_main h1, .about_text{
     text-align: center;
+    grid-column: 1 / span 2;
 }
 
-.about_text_flex {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-direction: column;
-}
-
-.about_container_flex {
+.about_container {
     display: flex;
     align-items: center;
     gap: 120px;
     flex-direction: row;
+    grid-column: 1 / span 2;
+}
+
+.about_container > img {
+    width: 100%;
+}
+
+.row_reverse {
+    flex-direction: row-reverse;
 }
 
 /* Library page */
@@ -530,7 +558,7 @@ div.film_info_block ul li a{
 .contact_main {
     width: 660px;
     position: relative;
-    margin: 124px 60px auto;
+    margin: 124px 60px 100px;
     z-index: -1;
 }
 
@@ -819,18 +847,19 @@ div.film_info_block ul li a{
 
 .product_films_details {
     display: grid;
-    grid-template-columns: repeat(12, 110px);
+    grid-template-columns: repeat(12, 1fr);
     justify-content: center;
     align-items: center;
     
 }
 
 .product_films_details > div {
-    grid-column: 4 / span 9;
+    grid-column: 4 / span 8;
     align-self: center;
 }
 
 .product_films_details > img {
+    grid-column: 2 / span 1;
     filter: drop-shadow(rgba(0, 0, 0, 0.637) 0rem 0rem 20px);
 }
 
@@ -839,12 +868,12 @@ div.film_info_block ul li a{
 }
 
 .youtube_trailer {
-    height: 75vw;
+    height: 100%;
     width: 140%;
     z-index: -2;
     position: fixed;
     left: -20%;
-    top: -180px;
+    top: -240px;
 }
 
 div.product_films_details ul li{
@@ -865,6 +894,7 @@ div.product_films_details ul li{
     background-color: #221c1e00;
     border: none;
     cursor: pointer;
+    z-index: 20;
 }
 
 .fa-chevron-left {
@@ -1257,4 +1287,218 @@ h2 {
 
 .infinity_info {
     background-color: #ff8989;
+}
+
+/* Tablet */
+
+@media (max-width: 1225px) {
+
+/* Library grid */
+
+.search_bar {
+    width: 520px;
+}
+
+.search_bar_long {
+    left: 480px;
+}
+
+.film_info_block {
+    display: none;
+}
+
+/* Product */
+
+.product_films_details {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.product_films_details > div {
+    grid-column: 3 / span 4;
+}
+
+.product_films_details > img {
+    grid-column: 1 / span 1;
+}
+
+div.product_films_details ul li {
+    margin-right: 20px;
+}
+
+.product_films_details > div > h1, .product_films_details > div > p, .product_films_details > div > h2 {
+    margin-bottom: 16px;
+}
+
+.youtube_trailer {
+    height: 160%;
+    width: 140%;
+    left: -20%;
+    top: -660px;
+}
+
+/* About */
+
+.about_main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    margin: 0px 60px;
+    margin-top: 244px;
+}
+
+.about_container {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    flex-direction: column;
+    grid-column: 1 / span 2;
+}
+
+.about_container > img {
+    width: 80%;
+}
+
+.row_reverse {
+    flex-direction: column;
+}
+
+/* Contact */
+
+.contact_main {
+    width: 500px;
+    margin: 124px 60px 100px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+/* Library grid */
+
+.library_films {
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+.search_bar {
+    width: 420px;
+    margin: 30px auto 30px auto;
+}
+
+.search_bar_long {
+    display: none;
+}
+
+.hyper_header {
+    font-size: 3.8rem;
+    width: 84vw;
+    margin: 30px auto 30px auto;
+}
+
+.library_main {
+    position: relative;
+    margin: 82px auto 88px;
+    width: 420px;
+}
+
+/* Product */
+
+.product_films_details {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product_films_details > div {
+    grid-column: 1 / span 2;
+}
+
+div.product_films_details ul li {
+    margin-right: 20px;
+}
+
+.product_films_details > div > h1, .product_films_details > div > p, .product_films_details > div > h2 {
+    margin-bottom: 16px;
+}
+
+.product_films_details > img {
+    justify-self: center;
+    grid-column: 1 / span 2;
+    margin-bottom: 16px;
+}
+
+.product_container {
+    padding: 164px 50px 60px;
+    min-height: 100vh;
+    background-color: rgb(34, 28, 30);
+    position: static;
+}
+
+.product_return {
+    margin: 82px 30px;
+}
+
+.fa-chevron-left {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.youtube_trailer {
+    display: none;
+}
+
+/* About */
+
+.header_about {
+    font-size: 3.8rem;
+    width: auto;
+    margin: 30px auto 90px auto;
+}
+
+.about_main {
+    margin-top: 132px;
+}
+
+.about_container {
+    gap: 40px;
+}
+
+.about_container > img {
+    width: 100%;
+}
+
+.quote {
+    width: auto;
+}
+
+/* Contact */
+
+.contact_main {
+    width: 82vw;
+    margin: 82px auto 100px;
+}
+
+/* Footer */
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer_grid > div, .footer_grid > p {
+    grid-column: 1;
+}
+
+.footer_right {
+    margin: 20px 0px;
+}
+
+footer {
+    height: fit-content;
+}
+
 }
