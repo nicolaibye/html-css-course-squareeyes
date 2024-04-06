@@ -20,40 +20,42 @@
     <header>
         <input type="checkbox" id="menu_checkbox">
         <label for="menu_checkbox" class="hamburger_icon"><i class="fas fa-bars"></i></label>
+        <a href="index.html"><img src="images/logo/squareeyes_header_logo.svg" alt="Square Eyes logo" class="header_logo"></a>
         <nav>
             <section class="left_header">
                 <a href="index.html"><img src="images/logo/squareeyes_header_logo.svg" alt="Square Eyes logo" class="header_logo"></a>
             </section>
             <section class="middle_header">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../library.html">Library</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="library.html">Library</a></li>
                     <input type="checkbox" id="genre_checkbox">
                     <label for="genre_checkbox">Genre</label>
                         <ul class="genre_dropdown">
-                            <li><a href="../genre/genre_action.html">Action</a></li>
-                            <li><a href="../genre/genre_fantasy.html">Fantasy</a></li>
-                            <li><a href="../genre/genre_thriller.html">Thriller</a></li>
+                            <li><a href="genre/genre_action.html">Action</a></li>
+                            <li><a href="genre/genre_fantasy.html">Fantasy</a></li>
+                            <li><a href="genre/genre_thriller.html">Thriller</a></li>
                         </ul>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </section>
             <section class="right_header">
                 <ul>
-                    <li><a href="../wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="../checkout/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="wishlist.html"><i class="fa-solid fa-heart" id="icon_wishlist"></i><span class="nav_wishlist">Wishlist</span></a></li>
+                    <li><a href="checkout/checkout.html"><i class="fa-solid fa-cart-shopping" id="icon_checkout"></i><span class="nav_checkout">Checkout</span></a></li>
                     <input type="checkbox" id="profile_checkbox">
-                    <label for="profile_checkbox" class="profile_icon"><i class="fa-solid fa-user nav-icon-active"></i></label>
+                    <label for="profile_checkbox" class="profile_icon"><i class="fa-solid fa-user nav-icon-active" id="icon_profile"></i><span class="nav_profile nav-active">Profile</span></label>
                         <ul class="profile_dropdown">
-                            <li><a href="../your_films.html">Your films</a></li>
-                            <li><a href="../profile.html" class="nav-active">Profile</a></li>
-                            <li><a href="../logout_screen.html">Log out</a></li>
+                            <li><a href="your_films.html">Your films</a></li>
+                            <li><a href="profile.html" class="nav-active">Profile</a></li>
+                            <li><a href="logout_screen.html">Log out</a></li>
                         </ul>
                 </ul>
             </section>
         </nav>
     </header>
+    
     <main class="library_main">
         <section class="profile_main_grid">
             <h1 class="hyper_header">Profile</h1>

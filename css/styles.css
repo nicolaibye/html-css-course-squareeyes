@@ -98,6 +98,10 @@ nav section {
     padding: 0rem 1rem;
 }
 
+header > a {
+    display: none;
+}
+
 nav, #menu_checkbox {
     display: none;
 }
@@ -106,7 +110,6 @@ nav, #menu_checkbox {
     display: block;
 }
 
-/* Backup genre menu */
 
 .genre_dropdown, #genre_checkbox {
     display: none;
@@ -131,17 +134,59 @@ nav, #menu_checkbox {
     height: auto;
 }
 
+.nav_wishlist, .nav_checkout, .nav_profile {
+    display: none;
+}
+
 @media (max-width: 1226px) {
+
+    .nav-active {
+        color: #FF4773;
+        text-decoration: underline;
+    }
+    
     nav {
         background: rgb(34,28,30);
+        height: auto;
+        padding: 0px 30px 30px 20px;
+        font-size: 2rem;
+    }
+
+    header > a {
+        display: flex;
+        padding: 10px;
+    }
+
+    header > label {
+        float: right;
     }
 
     nav section li {
         display: block;
+        margin: 20px 0px;
     }
 
     header {
             background: rgb(34,28,30);
+    }
+
+    .left_header {
+        display: none;
+    }
+
+    .nav_wishlist, .nav_checkout, .nav_profile {
+        display: block;
+    }
+
+    #genre_checkbox:checked ~ .genre_dropdown {
+        display: block;
+        position: static;
+        margin: 0px 12px 18px;
+    }
+
+    #profile_checkbox:checked ~ .profile_dropdown {
+        display: block;
+        margin: 0px 12px;
     }
 
 }
@@ -201,6 +246,7 @@ nav, #menu_checkbox {
     nav section li {
         display: inline-flex;
     }
+
 }
 
 /* Flexbox layout */
@@ -1197,7 +1243,7 @@ h2 {
 
 .fa-bars {
     padding: 16px;
-    font-size: 2rem;
+    font-size: 26px;
 }
 
 .search_bar_long {
@@ -1471,6 +1517,12 @@ div.product_films_details ul li {
     margin-bottom: 40px;
 }
 
+#icon_wishlist, #icon_checkout, #icon_profile {
+    display: none;
+}
+
+}
+
 /* Mobile */
 
 @media (max-width: 650px) {
@@ -1689,8 +1741,6 @@ div.product_films_details ul li {
 
 footer {
     height: fit-content;
-}
-
 }
 
 }
