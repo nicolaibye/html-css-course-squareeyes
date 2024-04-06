@@ -286,6 +286,27 @@ footer {
     position: absolute;
 }
 
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e9e9e9;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1a1416;
+    border-radius: 10px;
+  }
+  
+
 /* Button */
 
 .cta {
@@ -569,27 +590,22 @@ div.film_info_block ul li a{
 /* Checkout page */
 
 .checkout_main_shipping {
-    display: grid;
     grid-template-columns: repeat(11, 110px);
-    justify-content: center;
 }
 
-.checkout_main {
+.checkout_main, .checkout_main_shipping {
     display: grid;
     justify-content: center;
 }
 
-.checkout_main_grid {
+.checkout_main_grid, .checkout_overview_product {
     display: grid;
     grid-template-columns: repeat(11, 110px);
     margin: 0px auto;
 }
 
 .checkout_overview_product {
-    display: grid;
-    grid-template-columns: repeat(11, 110px) ;
     grid-auto-rows: min-content;
-    margin: 0px auto;
 }
 
 .checkout_main_grid hr {
@@ -1369,12 +1385,96 @@ div.product_films_details ul li {
     margin: 124px 60px 100px;
 }
 
+/* Profile page */
+
+.profile_main_grid {
+    grid-template-columns: 220px 110px 1fr 1fr;
+    column-gap: 60px;
+}
+
+.profile_main_grid > h1 {
+    grid-column: 1 / span 6;
+    margin-bottom: 60px;
+}
+
+.profile_main_grid > i {
+    grid-column: 1 / span 1;
+}
+
+.profile_main_grid > div {
+    grid-column: 2 / span 3;
+}
+
+/* Checkout page */
+
+
+.checkout_main_grid, .checkout_overview_product {
+    grid-template-columns: repeat(11, 60px);
+}
+
+.checkout_details_product {
+    grid-column: 3 / span 3;
+}
+
+.checkout_amount_text_product {
+    grid-column-start: 6;
+}
+
+.checkout_amount_product {
+    grid-column-start: 7;
+}
+
+.checkout_single_price_product {
+    grid-column-start: 10;
+}
+
+.checkout_total_price_product {
+    grid-column-end: 12;
+}
+
+.checkout_cta {
+    grid-column: 8 / span 1;
+}
+
+/* Checkout shipping */
+
+.checkout_main_shipping {
+    grid-template-columns: auto;
+}
+
+.checkout_shipping_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-auto-rows: min-content;
+    width: 80vw;
+    margin: 0px auto;
+    grid-row: 2;
+}
+
+.shipping_form {
+    display: block;
+    grid-column: 1 / span 4;
+    justify-content: space-between;
+}
+
+.shipping_two_cells > div > input {
+    width: 100%;
+}
+
+.shipping_single_cell {
+    width: 100%;
+}
+
+.checkout_your_order {
+    grid-column: 1;
+    width: 80vw;
+    margin-bottom: 40px;
 }
 
 /* Mobile */
 
 @media (max-width: 650px) {
-
+    
 /* Library grid */
 
 .library_films {
@@ -1395,7 +1495,7 @@ div.product_films_details ul li {
 .hyper_header {
     font-size: 3.8rem;
     width: 84vw;
-    margin: 30px auto 30px auto;
+    margin: 0px auto 0px auto;
 }
 
 .library_main {
@@ -1479,6 +1579,96 @@ div.product_films_details ul li {
     margin: 82px auto 100px;
 }
 
+/* Profile page */
+
+.profile_main_grid {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 60px;
+    justify-content: center;
+}
+
+.profile_main_grid > h1 {
+    grid-column: 1 / span 5;
+    margin-bottom: 60px;
+}
+
+.profile_main_grid > i {
+    grid-column: 1 / span 5;
+    margin-bottom: 60px;
+}
+
+.profile_main_grid > div {
+    grid-column: 1 / span 5;
+}
+
+/* Checkout */
+
+.checkout_main_grid > p {
+    display: none;    
+}
+
+.checkout_main_grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.checkout_overview_product {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.checkout_details_product {
+    grid-column: 2 / span 1;
+    padding: 0px;
+    padding-right: 10px;
+}
+
+.checkout_amount_text_product {
+    grid-column-start: 1;
+}
+
+.checkout_amount_product {
+    grid-column-start: 3;
+}
+
+.checkout_single_price_product {
+    grid-column-start: 2;
+    justify-self: flex-start;
+}
+
+.checkout_total_price_product {
+    grid-column-end: 4;
+}
+
+.checkout_cta {
+    justify-self: center;
+    grid-column: 2 / span 3;
+}
+
+.checkout_picture {
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+/* Checkout shipping */
+
+.checkout_shipping_grid h1 {
+    grid-column: 1;
+}
+
+.checkout_shipping_grid hr {
+    width: 80vw;
+}
+
+.shipping_form {
+    width: 80vw;
+}
+
+/* Checkout success */
+
+.checkout_success_main {
+    width: 80vw;
+    height: 100vh;
+}
+
 /* Footer */
 
 .footer_grid {
@@ -1499,6 +1689,8 @@ div.product_films_details ul li {
 
 footer {
     height: fit-content;
+}
+
 }
 
 }
