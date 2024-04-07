@@ -1859,6 +1859,7 @@ div.product_films_details ul li {
 .checkout_success_main {
     width: 80vw;
     height: 100vh;
+    margin-top: 112px;
 }
 
 .checkout_success_action {
