@@ -138,7 +138,7 @@ nav, #menu_checkbox {
     display: none;
 }
 
-@media (max-width: 1226px) {
+@media (max-width: 1001px) {
 
     .nav-active {
         color: #FF4773;
@@ -191,7 +191,7 @@ nav, #menu_checkbox {
 
 }
 
-@media (min-width: 1225px) {
+@media (min-width: 1000px) {
     nav {
         display: flex;
         position: sticky;
@@ -1364,7 +1364,7 @@ div.featured_films_details ul li:hover, div.product_films_details ul li:hover, .
 
 /* Tablet */
 
-@media (max-width: 1225px) {
+@media (max-width: 1000px) {
 
 /* Button */
 
@@ -1570,7 +1570,19 @@ div.product_films_details ul li {
 /* Home page */
 
 div.featured_films_details ul li {
-    margin-right: 16px;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.featured_films_details {
+    width: 260px;
+}
+
+.featured_films_details > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
 .section_films {
@@ -1586,14 +1598,19 @@ div.featured_films_details ul li {
 .films_header {
     grid-template-columns: 240px 1fr;
     align-items: center;
-
 }
+
+.films_header > a {
+display: none;
+}
+
 
 .featured_films_details_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, rgba(28, 38, 46, 1) 0%, rgba(25, 73, 101, 1) 50%, rgba(12, 108, 149, 1) 75%, rgba(80, 189, 228, 1) 100%);
+    padding: 90px 50px 0px;
 }
 
 .inspiration_section {
@@ -1606,6 +1623,10 @@ div.featured_films_details ul li {
 
 .inspiration_text > * {
     margin: 28px 0px 0px 0px;
+}
+
+.inspiration_section input {
+    width: 232px;
 }
 
 .inspiration_section_img {
@@ -1629,12 +1650,12 @@ div.featured_films_details ul li {
 }
 
 .search_bar {
-    width: 370px;
+    width: 280px;
     margin: 30px auto 30px auto;
 }
 
 .hyper_header {
-    font-size: 3.8rem;
+    font-size: 3rem;
     width: 84vw;
     margin: 0px auto 0px auto;
 }
@@ -1642,12 +1663,13 @@ div.featured_films_details ul li {
 .library_main {
     position: relative;
     margin: 82px auto 88px;
-    width: 420px;
+    width: 320px;
     padding: 0px 20px;
 }
 
 .search_bar_long {
-    left: 355px;
+    left: 262px;
+    top: 68px;
 }
 
 /* Product */
@@ -1663,7 +1685,7 @@ div.featured_films_details ul li {
 div.product_films_details ul li {
     margin-right: 0px;
     margin-bottom: 6px;
-    width: 112px;
+    width: 100%;
 }
 
 .product_films_details > div > h1, .product_films_details > div > p, .product_films_details > div > h2 {
@@ -1703,13 +1725,14 @@ div.product_films_details ul li {
 /* About */
 
 .header_about {
-    font-size: 3.8rem;
+    font-size: 3rem;
     width: auto;
     margin: 30px auto 90px auto;
 }
 
 .about_main {
-    margin-top: 132px;
+    margin: 60px auto;
+    padding: 20px;
 }
 
 .about_container {
@@ -1729,6 +1752,10 @@ div.product_films_details ul li {
 .contact_main {
     width: 82vw;
     margin: 82px auto 100px;
+}
+
+.cta_contact {
+    width: 100%;
 }
 
 /* Profile page */
@@ -1801,6 +1828,10 @@ div.product_films_details ul li {
     align-self: center;
 }
 
+.counter span {
+    display: none;
+}
+
 /* Checkout shipping */
 
 .checkout_shipping_grid h1 {
@@ -1815,11 +1846,25 @@ div.product_films_details ul li {
     width: 80vw;
 }
 
+.film_checkout_overview > div > h2 {
+    margin: 8px 16px;
+}
+
+.total_value {
+    display: none;
+}
+
 /* Checkout success */
 
 .checkout_success_main {
     width: 80vw;
     height: 100vh;
+}
+
+.checkout_success_action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Footer */
