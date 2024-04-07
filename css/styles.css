@@ -325,6 +325,7 @@ footer {
 }
 
 .footer_index {
+    position: relative;
     bottom: -651px;
 }
 
@@ -964,6 +965,11 @@ div.product_films_details ul li{
     font-size: 5rem;
 }
 
+#watch_trailer {
+    display: none;
+}
+
+
 /* Godzilla */
 
 .a_thousand_and_one_product {
@@ -1239,6 +1245,11 @@ h2 {
     text-transform: uppercase;
 }
 
+div.featured_films_details ul li:hover, div.product_films_details ul li:hover, .cta_contact:hover, .cta:hover, div.film_info_block ul li:hover {
+    background-color: #D9335B;
+    transition-duration: 0.5s;
+}
+
 /* Icons */
 
 .fa-bars {
@@ -1354,6 +1365,30 @@ h2 {
 /* Tablet */
 
 @media (max-width: 1225px) {
+
+/* Button */
+
+div.featured_films_details ul li, div.product_films_details ul li, .cta_contact, .cta {
+    background-color: #D9335B;
+}
+
+/* Home page */
+
+.section_films {
+    gap: 32px;
+}
+
+.featured_films_details_container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.featured_films_details {
+    grid-column: 2 / span 2;
+}
 
 /* Library grid */
 
@@ -1526,7 +1561,60 @@ div.product_films_details ul li {
 /* Mobile */
 
 @media (max-width: 650px) {
-    
+
+/* Home page */
+
+div.featured_films_details ul li {
+    margin-right: 16px;
+}
+
+.section_films {
+    gap: 20px;
+}
+
+.section_films_container {
+    top: 1031px;
+    padding: 32px;
+    height: 367px;
+}
+
+.films_header {
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+
+}
+
+.featured_films_details_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(28, 38, 46, 1) 0%, rgba(25, 73, 101, 1) 50%, rgba(12, 108, 149, 1) 75%, rgba(80, 189, 228, 1) 100%);
+}
+
+.inspiration_section {
+    bottom: -1031px;
+}
+
+.inspiration_section > div:first-child {
+    padding: 32px;
+}
+
+.inspiration_text > * {
+    margin: 28px 0px 0px 0px;
+}
+
+.inspiration_section_img {
+    display: none;
+}
+
+.footer_index {
+    bottom: -1031px;
+}
+
+.featured_films_trailer {
+    display: none;
+}
+
 /* Library grid */
 
 .library_films {
@@ -1577,14 +1665,18 @@ div.product_films_details ul li {
 .product_films_details > img {
     justify-self: center;
     grid-column: 1 / span 2;
-    margin-bottom: 16px;
+    margin-bottom: 60px;
 }
 
 .product_container {
-    padding: 164px 50px 60px;
+    padding: 164px 21px 60px;
     min-height: 100vh;
     background-color: rgb(34, 28, 30);
     position: static;
+}
+
+#watch_trailer {
+    display: inline-flex;
 }
 
 .product_return {
