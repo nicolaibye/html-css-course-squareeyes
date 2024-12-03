@@ -2,8 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/e0859b1e-0eda-40eb-8c35-87ea3c1c0f86)
 
-
-After attending classes on design, HTML, and CSS, we were tasked with coding our very first website. Part of the brief involved choosing one of three different brands and creating its profile, along with coding the entire site.
+After attending classes on design, HTML, and CSS, we were tasked with coding our very first website. Part of the brief involved choosing one of three different brands and creating its profile, along with coding the entire site. 
+[The website](https://nicolaibye.github.io/html-css-course-squareeyes/)
 
 ## Description
 
